@@ -1,0 +1,470 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+/* Variables */
+:root {
+    --bg-buttons: #1394df;
+    --bg-smooth-blue: #d7f5f5;
+    --bg-cream: #FDF2E9;
+    --white: #fff;
+    --black: #000;
+    --gray-text: #616A6B;
+    --hover-btns: #154360;
+    --font: 'Inter', sans-serif;
+    --font-light: 300;
+    --font-regular: 400;
+    --font-bold: 700;
+    --line-height: 1.5rem;
+    --h1-clamp: clamp(1.3rem, 7vw, 3rem);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: var(--font);
+}
+
+/* Clases de utilidad */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.container__section {
+    --padding: 50px 0;
+    padding: var(--padding);
+}
+
+/* ESTILOS - HEADER */
+.header {
+    background-color: var(--bg-cream);
+    padding: 25px 0;
+}
+
+.nav {
+    height: 80px;
+}
+
+.container__nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__logo,
+.footer__logo {
+    color: rgb(8, 84, 176);
+}
+
+.nav__logo .logo,
+.footer__logo .logo {
+    font-style: italic;
+}
+
+#menu__hamburger {
+    display: none;
+}
+
+.nav__links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    list-style: none;
+}
+
+.nav__links .nav__item a {
+    color: var(--gray-text);
+    font-weight: var(--font-light);
+}
+
+.btn__twitter {
+    color: var(--white);
+    background-color: var(--bg-buttons);
+    padding: 15px 20px;
+    display: grid;
+    grid-auto-flow: column;
+    place-items: center;
+    gap: .7rem;
+    font-size: 19px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+
+    transition: 300ms ease;
+}
+
+:is(.btn__twitter:hover, .btn__twitter--modified:hover) {
+    background-color: var(--hover-btns);
+}
+
+/* ESTILOS - SECCION HEADER CONTENT */
+.header__content {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.header__texts {
+    width: 49%;
+    display: grid;
+    gap: 1.3rem;
+}
+
+.header__texts--title {
+    font-size: var(--h1-clamp);
+}
+
+.header__texts--paragraph,
+.header__texts--info {
+    color: var(--gray-text);
+    line-height: var(--line-height);
+}
+
+.header__texts--btns {
+    display: flex;
+}
+
+.btn__learn--more {
+    color: #2980B9;
+    padding: 15px 20px;
+    background-color: transparent;
+    font-size: 19px;
+    border: none;
+    cursor: pointer;
+}
+
+.header__texts--avatars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+}
+
+img.avatar:not(img.avatar__one) {
+    margin-left: -1.2rem;
+}
+
+.header__texts--info span {
+    color: #2980B9;
+    font-weight: var(--font-bold);
+}
+
+.header__img img.img__desktop,
+.header__img img.img__tablet {
+    width: 100%;
+    max-height: 600px;
+}
+
+.header__img img.img__tablet {
+    display: none;
+}
+
+/* ESTILOS - SECCION FEATURES */
+.features__title {
+    font-size: 1.6rem;
+}
+
+.features__grid {
+    margin-top: 1.2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.8rem;
+}
+
+.feature__box {
+    padding: 20px;
+    border: 2px solid rgba(128, 128, 128, 0.500);
+    border-radius: 7px;
+}
+
+span.feature__box--emoji {
+    font-size: 40px;
+}
+
+.feature__box--title {
+    margin-bottom: 1rem;
+}
+
+.feature__box--paragraph {
+    color: var(--gray-text);
+    line-height: var(--line-height);
+}
+
+/* ESTILOS - SECCION CUSTOMERS */
+section.customers {
+    background-color: var(--bg-smooth-blue);
+}
+
+.customers__grid {
+    margin-top: 1.8rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    gap: 1rem;
+}
+
+.customer__box {
+    width: 100%;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.customer__profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.customer__info {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.customer__name {
+    font-size: 16px;
+}
+
+.customer__nickname {
+    font-size: 13px;
+    color: var(--gray-text);
+}
+
+.img__twitter {
+    height: 30px;
+}
+
+.customer__opinion {
+    margin: 1.5rem 0;
+    line-height: var(--line-height);
+}
+
+.customer__opinion,
+.customer__like {
+    color: var(--gray-text);
+}
+
+.customer__like {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.customer__like div {
+    display: grid;
+    place-items: center;
+    grid-auto-flow: column;
+    gap: .3rem;
+}
+
+/* ESTILOS - SECCION PRICE PLAN */
+section.price__plan {
+    text-align: center;
+}
+
+.price__plan--paragraph {
+    margin: 1rem 0 3rem 0;
+}
+
+.price__plan--card {
+    background-color: var(--bg-cream);
+    width: clamp(250px, 75vw, 450px);
+    margin: 0 auto;
+    padding: 30px;
+    text-align: left;
+    border-radius: 8px;
+    border: 1px solid rgb(237, 159, 159);
+}
+
+.price__plan--benefits {
+    padding: 15px 0;
+    display: grid;
+    gap: 1rem;
+    border-top: 1px solid rgba(128, 128, 128, 0.500);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.500);
+}
+
+.price__plan--date {
+    color: var(--gray-text);
+}
+
+.price__plan--cost {
+    color: var(--gray-text);
+    margin: .6rem 0 1rem 0;
+}
+
+.price__plan--cost span {
+    color: var(--black);
+    font-size: 35px;
+    font-weight: var(--font-bold);
+}
+
+.price__plan--benefit {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.price__plan--benefit img {
+    height: 20px;
+}
+
+.price__plan--benefit p {
+    font-size: 15px;
+    color: var(--gray-text);
+}
+
+.btn__twitter--modified {
+    background-color: var(--bg-buttons);
+    color: var(--white);
+    width: 100%;
+    padding: 10px 0;
+    margin-top: .7rem;
+    display: grid;
+    place-items: center;
+    place-content: center;
+    grid-auto-flow: column;
+    gap: 1rem;
+    font-weight: var(--font-bold);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    transition: 300ms ease;
+}
+
+/* ESTILOS - FOOTER */
+.footer {
+    padding: 20px 0;
+    background-color: var(--bg-smooth-blue);
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer__terms {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1.2rem;
+}
+
+.footer__terms a {
+    color: var(--black);
+    font-weight: var(--font-light);
+}
+
+/* -------- RESPONSIVE ----------- */
+
+/* Media Queries - Tablet Design */
+@media only screen and (max-width: 876px) {
+    .nav__links {
+        height: 250px;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 100px;
+        right: 0;
+        background-color: var(--bg-cream);
+        opacity: 0;
+        box-shadow: 0 5px 10px rgba(128, 128, 128, 0.500);
+
+        transition: 300ms ease;
+    }
+
+    #menu__hamburger {
+        display: block;
+        z-index: 2;
+    }
+
+    .active {
+        opacity: 1;
+        border-top: 1px solid var(--gray-text);
+    }
+
+    .header__content {
+        flex-direction: column;
+    }
+
+    .header__texts {
+        width: 100%;
+        text-align: center;
+        order: 1;
+    }
+
+    .header__texts--btns {
+        justify-content: center;
+    }
+
+    .header__texts--avatars {
+        justify-content: center;
+    }
+
+    .header__img img.img__desktop {
+        display: none;
+    }
+
+    .header__img img.img__tablet {
+        display: block;
+    }
+
+    .features__title,
+    .customers__title {
+        text-align: center;
+    }
+
+    .features__grid,
+    .customers__grid {
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+
+    .customer__box {
+        max-width: 270px;
+    }
+}
+
+/* Media Queries - Mobile Design */
+@media only screen and (max-width: 572px) {
+    .header__texts--btns {
+        flex-direction: column;
+    }
+
+    .header__texts--btns button {
+        align-self: center;
+    }
+
+    .header__img img.img__desktop {
+        display: block;
+    }
+
+    .header__img img.img__tablet {
+        display: none;
+    }
+
+    .price__plan--card {
+        padding: 30px 15px;
+    }
+
+    br {
+        display: none;
+    }
+}
